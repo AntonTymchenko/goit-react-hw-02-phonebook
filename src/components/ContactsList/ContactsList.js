@@ -1,7 +1,6 @@
 import React from "react";
 
 function ContactsList(props) {
-  console.log(props.contacts);
   return (
     <ul>
       {props.contacts.map(({ id, name, number }) => (
