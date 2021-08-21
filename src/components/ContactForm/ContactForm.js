@@ -1,4 +1,5 @@
 import React from "react";
+import s from "./ContactForm.module.css";
 
 class ContactForm extends React.Component {
   state = {
@@ -23,10 +24,11 @@ class ContactForm extends React.Component {
   };
   render() {
     return (
-      <form onSubmit={this.formHandleSubmit}>
-        <label>
+      <form onSubmit={this.formHandleSubmit} className={s.form}>
+        <label className={s.label}>
           Name
           <input
+            className={s.inputName}
             onChange={this.inputGetValue}
             type="text"
             value={this.state.name}
@@ -34,11 +36,13 @@ class ContactForm extends React.Component {
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
             required
+            placeholder="Ivan Ivanov"
           />
         </label>
         <label>
           Number
           <input
+            className={s.inputFrom}
             onChange={this.inputGetValue}
             type="tel"
             value={this.state.number}
@@ -46,8 +50,11 @@ class ContactForm extends React.Component {
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
             required
+            placeholder="098-111-22-33"
           />
-          <button type="submit">Add contact</button>
+          <button type="submit" className={s.AddBtn}>
+            Add contact
+          </button>
         </label>
       </form>
     );

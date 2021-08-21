@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import { StrictMode } from "react";
 
 import "./index.css";
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+  document.querySelector("#root")
+);
