@@ -1,9 +1,2 @@
-.itemOflistOfContacts {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid grey;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.5) 3px 10px 10px -10px;
-  margin-bottom: 5px;
-}
+
+
